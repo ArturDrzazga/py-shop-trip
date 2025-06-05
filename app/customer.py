@@ -2,6 +2,8 @@ from typing import Any
 from app.car import Car
 import math
 
+from app.utils import format_price
+
 
 class Customer:
     def __init__(self,
@@ -40,7 +42,7 @@ class Customer:
             total_cost = round(fuel_cost + product_cost, 2)
 
             print(f"{self.name}'s trip to the {shop.name}"
-                  f" costs {total_cost:.2f}")
+                  f" costs {format_price(total_cost)}")
 
             if total_cost <= self.money and total_cost < lowest_total:
                 lowest_total = total_cost
