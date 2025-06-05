@@ -21,7 +21,7 @@ class Customer:
         self.home = location.copy()
 
     def calculate_distance(self, other_location: list) -> float:
-        x1, y1 = self.location
+        x1, y1 = self.home
         x2, y2 = other_location
         return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
